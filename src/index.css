@@ -136,23 +136,41 @@ body {
 }
 .sl-tabs {
   display: flex;
+  gap: 6px;
+  padding: 8px;
   border-bottom: 1px solid #fff1;
+  background: #ffffff05;
   flex-shrink: 0;
 }
 .sl-tab {
   flex: 1;
-  padding: 11px 6px;
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 8px;
+  padding: 9px 8px;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
-  color: #fff5;
+  color: #ffffff85;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.15s;
+  transition: all 0.18s ease;
+  font-family: inherit;
+  line-height: 1.1;
+}
+.sl-tab:hover {
+  color: #fff;
+  background: #ffffff10;
+}
+.sl-tab:focus-visible {
+  outline: none;
+  border-color: #71b24899;
+  box-shadow: 0 0 0 2px #71b24822;
 }
 .sl-tab.active {
-  color: var(--green);
-  border-bottom-color: var(--green);
+  color: #d9f5c9;
+  border-color: #71b24866;
+  background: linear-gradient(180deg, #71b2482c 0%, #71b24818 100%);
 }
 .sl-pane {
   flex: 1;
@@ -598,25 +616,41 @@ body {
 }
 .panel-tabs {
   display: flex;
+  gap: 6px;
+  padding: 8px;
   border-bottom: 1px solid var(--border);
-  background: var(--surface);
+  background: #f2f4f2;
   flex-shrink: 0;
 }
 .panel-tab {
   flex: 1;
-  padding: 12px 8px;
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 8px;
+  padding: 9px 8px;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
-  color: var(--muted);
+  color: #6f7780;
   cursor: pointer;
-  border-bottom: 2px solid transparent;
-  transition: all 0.15s;
+  transition: all 0.18s ease;
+  font-family: inherit;
+  line-height: 1.1;
+}
+.panel-tab:hover {
+  color: #2f363d;
+  background: #e8ece8;
+}
+.panel-tab:focus-visible {
+  outline: none;
+  border-color: #71b24866;
+  box-shadow: 0 0 0 2px #71b24822;
 }
 .panel-tab.active {
-  color: var(--green);
-  border-bottom-color: var(--green);
-  background: var(--card);
+  color: #2f7d30;
+  border-color: #71b24866;
+  background: linear-gradient(180deg, #71b2481f 0%, #ffffff 100%);
 }
 .detail-panel,
 .dist-view-panel,
