@@ -923,7 +923,7 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: #d0d4d0; border-radius: 2px; }
 
-/* Overlay for mobile drawers */
+/* Overlay for mobile drawers (solo visible en móvil, ver @media 768px) */
 .sidebar-overlay {
   display: none;
   position: fixed;
@@ -931,7 +931,6 @@ body {
   background: rgba(0,0,0,0.4);
   z-index: 90;
 }
-.sidebar-overlay.open { display: block; }
 
 /* Mobile menu buttons in header */
 .header-menu-btn {
@@ -954,6 +953,7 @@ body {
 }
 
 @media (max-width: 768px) {
+  .sidebar-overlay.open { display: block; }
   html, body { overflow: auto; height: auto; min-height: 100vh; }
   .shell { flex-direction: column; height: auto; min-height: calc(100vh - 56px); }
   .sidebar-left {
